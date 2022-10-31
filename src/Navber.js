@@ -4,11 +4,7 @@ const Navbar = () => {
             <h1>Blog Bone</h1>
             <div className="links">
                 <a href="/">Home</a>
-                <a href="/create" style={{
-                    color: "white",
-                    backgroundColor: '#f1356d',
-                    borderRadius: '8px'
-                }}>Blog Baru</a>
+                <a href="/create">Blog Baru</a>
             </div>
         </nav>
     );
