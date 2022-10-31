@@ -5,13 +5,6 @@ const Home = () => {
 
     const [blogs, setBlogs] = useState(null)
 
-    // Handling delete blog
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id)
-
-        setBlogs(newBlogs);
-    }
-
     // Run Every time the data change
     useEffect(() => {
       fetch('http://localhost:8222/blogs')
@@ -28,7 +21,7 @@ const Home = () => {
     return (
         <div className="home">
             {/* If blogs is not null then it will render */}
-            {blogs && <BlogList blogs={blogs} title="Semua Judul" handleDelete={handleDelete} />}
+            {blogs && <BlogList blogs={blogs} title="Semua Judul" />}
         </div>
     );
 }
