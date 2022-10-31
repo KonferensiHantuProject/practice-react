@@ -9,8 +9,6 @@ const Home = () => {
         { title: 'Tips dan trik', body: 'Lorem Ipsum', author: 'bone', id: 3 }
     ])
 
-    const [name, setName] = useState('anton');
-
     // Handling delete blog
     const handleDelete = (id) => {
         const newBlogs = blogs.filter(blog => blog.id !== id)
@@ -18,17 +16,14 @@ const Home = () => {
         setBlogs(newBlogs);
     }
 
-    // Run Every time the data change, give [] as second argument to run useEffect after first render
+    // Run Every time the data change
     useEffect(() => {
         console.log('Use Effect Jalan')
-        console.log(name)
-    }, [name]);
+    });
 
     return (
         <div className="home">
             <BlogList blogs={blogs} title="Semua Judul" handleDelete={handleDelete} />
-            <button onClick={() => setName('noni')}>Ubah nama</button>
-            <p>{name}</p>
         </div>
     );
 }
