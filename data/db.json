@@ -1,0 +1,22 @@
+{
+    "blogs": [
+        { 
+            "title": "Web Baru ku", 
+            "body": "Lorem Ipsum", 
+            "author": "bone", 
+            "id": 1 
+        },
+        { 
+            "title": "Selamat Datang", 
+            "body": "Lorem Ipsum", 
+            "author": "toni", 
+            "id": 2 
+        },
+        { 
+            "title": "Tips dan trik", 
+            "body": "Lorem Ipsum", 
+            "author": "bone", 
+            "id": 3 
+        }
+    ]
+}
