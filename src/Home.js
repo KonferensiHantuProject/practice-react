@@ -3,11 +3,7 @@ import BlogList from "./BlogList";
 
 const Home = () => {
 
-    const [blogs, setBlogs] = useState([
-        { title: 'Web Baru ku', body: 'Lorem Ipsum', author: 'bone', id: 1 },
-        { title: 'Selamat Datang', body: 'Lorem Ipsum', author: 'toni', id: 2 },
-        { title: 'Tips dan trik', body: 'Lorem Ipsum', author: 'bone', id: 3 }
-    ])
+    const [blogs, setBlogs] = useState(null)
 
     // Handling delete blog
     const handleDelete = (id) => {
@@ -18,12 +14,21 @@ const Home = () => {
 
     // Run Every time the data change
     useEffect(() => {
-        console.log('Use Effect Jalan')
-    });
+      fetch('http://localhost:8222/blogs')
+        // Getting response
+        .then(res => {
+            return res.json()
+        })
+        // Getting data
+        .then((data) => {
+           setBlogs(data);
+        })
+    }, []);
 
     return (
         <div className="home">
-            <BlogList blogs={blogs} title="Semua Judul" handleDelete={handleDelete} />
+            {/* If blogs is not null then it will render */}
+            {blogs && <BlogList blogs={blogs} title="Semua Judul" handleDelete={handleDelete} />}
         </div>
     );
 }
