@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
-    const [title, setTitle] = useState('')
-    const [body, setBody] = useState('')
-    const [author, setAuthor] = useState('mario')
-    const [isPending, setIsPending] = useState(false)
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
+    const [author, setAuthor] = useState('mario');
+    const [isPending, setIsPending] = useState(false);
+    const history = useHistory();
 
     // Submit Event
     const handleSubmit = (e) => {
@@ -20,8 +22,14 @@ const Create = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)
         }).then(() => {
-            console.log('Blog Baru')
+            console.log('Blog Baru');
             setIsPending(false);
+    
+            // Go back to history
+            // history.go(-1);
+
+            // Ridrect back user
+            history.push('/');
         })
     }
 
