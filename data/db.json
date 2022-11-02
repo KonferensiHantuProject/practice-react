@@ -1,22 +1,34 @@
 {
-    "blogs": [
-        { 
-            "title": "Web Baru ku", 
-            "body": "Lorem Ipsum", 
-            "author": "bone", 
-            "id": 1 
-        },
-        { 
-            "title": "Selamat Datang", 
-            "body": "Lorem Ipsum", 
-            "author": "toni", 
-            "id": 2 
-        },
-        { 
-            "title": "Tips dan trik", 
-            "body": "Lorem Ipsum", 
-            "author": "bone", 
-            "id": 3 
-        }
-    ]
+  "blogs": [
+    {
+      "title": "Web Baru ku",
+      "body": "Lorem Ipsum",
+      "author": "bone",
+      "id": 1
+    },
+    {
+      "title": "Selamat Datang",
+      "body": "Lorem Ipsum",
+      "author": "toni",
+      "id": 2
+    },
+    {
+      "title": "Tips dan trik",
+      "body": "Lorem Ipsum",
+      "author": "bone",
+      "id": 3
+    },
+    {
+      "title": "Judul Baru",
+      "body": "Ini adalah isinya",
+      "author": "yoshi",
+      "id": 4
+    },
+    {
+      "title": "Judul terbary",
+      "body": "Ini adalah kontennya",
+      "author": "mario",
+      "id": 5
+    }
+  ]
 }
