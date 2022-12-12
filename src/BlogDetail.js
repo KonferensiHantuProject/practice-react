@@ -22,7 +22,7 @@ const BlogDetail = () => {
             {blog && (
                 <article>
                     <h2>{ blog.title }</h2>
-                    <p>Ditulis oleh {blog.author}</p>
+                    <p>Ditulis Oleh {blog.author}</p>
                     <div>{ blog.body }</div>
                     <button onClick={handleClick}>Hapus</button>
                 </article>
